@@ -1,0 +1,13 @@
+# Project Rules
+
+## Architecture & Structure
+- **ALWAYS read `ARCHITECTURE.md`** before making any structural changes, adding new features, or creating new files.
+- This project strictly follows **Clean Architecture** and **MVVM**.
+- **DO NOT** violate the Dependency Rule: `Presentation` และ `Data` สามารถเรียกใช้ `Domain` ได้ แต่ `Domain` ห้ามรู้จัก `Presentation` หรือ `Data` เด็ดขาด.
+- **Inversion of Control (IoC):** การติดต่อกับ Hardware (เช่น Camera) หรือ Framework ภายนอก (เช่น Vision) ต้องทำผ่าน Protocol ที่นิยามไว้ใน `Domain/Repository` เสมอ.
+- **Dependency Injection:** ทุกคลาสหลักควรใช้ DI (ฉีด dependencies เข้าไป) เพื่อให้ง่ายต่อการทำ Unit Test โดยจัดการผ่าน `DependencyContainer`.
+
+## Swift / iOS Best Practices
+- Use `SwiftUI` for all new UI components.
+- Avoid 3rd-party dependencies when native Apple Frameworks (e.g., `AVFoundation`, `Vision`) can do the job.
+- Group files by Clean Architecture layers (Core, Data, Domain, Presentation), not by file types.
