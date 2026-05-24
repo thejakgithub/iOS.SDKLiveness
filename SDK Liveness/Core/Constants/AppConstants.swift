@@ -9,7 +9,7 @@ enum AppConstants {
   // MARK: - App Info
   static let appName = "SDKLiveness"
   static let appVersion = "0.0.1"
-  static let poweredBy = "Powered by Freewillsolutions"
+  static let poweredBy = "Powered by Switt"
 
   // MARK: - Session
   static let sessionTimeoutSeconds: TimeInterval = 60
